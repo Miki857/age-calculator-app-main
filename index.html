@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <title>Age calculator app</title>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="body flex justify-center align-center">
+    <form class="calculator flex flex-column" onsubmit="calculateAge(); return false;">
+      <section class="input__section flex">
+        <div class="inputContainer inputDay flex flex-column">
+          <label for="dayInput">Day</label>
+          <input class="dayInput" type="number" name="dayInput" min="1" max="31" placeholder="DD" required>
+        </div>
+        <div class="inputContainer inputMonth flex flex-column">
+          <label for="monthInput">Month</label>
+          <input class="monthInput" type="number" name="monthInput" min="1" max="12" placeholder="MM" required>
+        </div>
+        <div class="inputContainer inputYear flex flex-column">
+          <label for="yearInput">Year</label>
+          <input class="yearInput" type="number" name="yearInput" min="1914" max="2024" placeholder="YY" required>
+        </div>
+      </section>
+
+      <div class="hrBtn__container flex flex-column">
+        <hr>
+        <button type="submit" class="calculate_btn"></button>
+      </div>
+
+      <div class="displayResults">
+        <p><i class="years">--</i> years</p>
+        <p><i class="months">--</i> months</p>
+        <p><i class="days">--</i> days</p>
+      </div>
+    </form>
+    <!-- SCRIPTS -->
+    <script src="assets/js/calculateAge.js" defer></script>
+  </body>
+</html>
